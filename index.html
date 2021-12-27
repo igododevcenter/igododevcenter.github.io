@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Business transactions, blogs and tutprials">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Python, C#, C++, Django, Flask Tutorials">
+        <meta name="author" content="Wellington Oronsaye">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UbiniTech</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+            crossorigin="anonymous">
+        <style>
+            .navbar-brand{text-shadow: 2px 2px 2px purple; color: #FFF !important;}
+            #logo{color: var(--bs-indigo); text-shadow: 2px 2px 4px var(--bs-dark); font-size: 80%; width: 15%;}
+        </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand rounded-circle" href="index.php">UbiniTech</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tutorials
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                <li><a class="dropdown-item" href="#">CSS</a></li>
+                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">XML</a></li>
+                                <li><a class="dropdown-item" href="#">XSLT</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="?page=playground">Coding Playground</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Django</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">C#</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blogs</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">SSH</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+                        <button class="btn btn-success ms-1" type="button">Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <div id="successMsg" class="alert alert-success"></div>
+                    <div id="errorMsg" class="alert alert-danger"></div>
+                        <form class="row g-3 needs-validation" novalidate>
+
+                            <div class="col-6">
+                                <label for="firstNameLabel" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" value="" required>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="lastNameLabel" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="lastName" value="" required>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="email" class="form-label">Email | Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="ConfirmEmail" class="form-label">Confirm Email | Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="email" class="form-control" id="confirmEmail" aria-describedby="inputGroupPrepend" required>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" value="" required>
+                            </div>
+
+                            <div class="col-6">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" value="" required>
+                            </div>
+  
+                            <div class="col-12">
+                                <button class="btn btn-primary" id="registerBtn" type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+            crossorigin="anonymous"></script>
+
+        <script>
+            if (typeof jQuery == 'undefined') {
+                console.log("jQuery is not installed");
+            } else {
+                console.log("jQuery is installed");
+            }
+        </script>
+        <script src="src/js/jQueryFormValidation.js" defer async></script>
+    </body>
+</html>    
